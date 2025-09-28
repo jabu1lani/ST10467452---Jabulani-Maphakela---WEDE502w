@@ -172,6 +172,6 @@ This document uses APA 7th Edition referencing style as required by The Independ
 **Current Phase**: Enhanced Functionality & SEO  
 **Next Milestone**: Part 3 Implementation - JavaScript & SEO  
 **Last Updated**: 28 September 2025  
-**GitHub Repository**: [Your Repository URL]
+**GitHub Repository**: (https://github.com/jabu1lani/ST10467452---Jabulani-Maphakela---WEDE502w)
 
 © 2025 The Independent Institute of Education (Pty) Ltd. This document contains confidential information for academic purposes only.
