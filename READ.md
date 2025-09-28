@@ -1,0 +1,128 @@
+# GreenEarth Community Garden Website
+
+## Student Information
+
+- **Student Name**: Jabulani Maphakela
+- **Student Number**: ST10467452
+- **Module**: WEDE502w
+
+## Project Overview
+
+The GreenEarth Community Garden website is a comprehensive digital platform designed to promote urban sustainability and community engagement through gardening initiatives. This website serves as the primary online presence for the Melbourne-based non-profit organization established in 2015, connecting residents, volunteers, and community partners with gardening programs, educational workshops, and volunteer opportunities across three inner-city garden locations.
+
+## Website Goals and Objectives
+
+### Primary Goals
+
+1. **Community Engagement**: Increase participation in community gardening programs by 40% within 6 months
+2. **Volunteer Recruitment**: Streamline volunteer application process and increase volunteer sign-ups by 25%
+3. **Educational Outreach**: Provide accessible information about sustainable gardening practices
+4. **Service Promotion**: Showcase all available programs and services to the community
+
+### Specific Objectives
+
+- Create an intuitive user experience for all age groups
+- Implement responsive design for cross-device compatibility
+- Establish clear communication channels for inquiries and partnerships
+- Provide comprehensive information about gardening programs and workshops
+- Facilitate easy volunteer registration and service access
+
+## Key Features and Functionality
+
+### Part 1: HTML Basic Layout & Project Foundation
+
+- **Semantic HTML5 Structure**: Proper use of header, nav, main, section, footer elements
+- **Five Main Pages**: Home, About, Services, Volunteer, and Contact with consistent navigation
+- **Content Organization**: Logical information architecture and content hierarchy
+- **Form Structures**: Basic contact and volunteer application forms
+- **Accessibility Foundation**: Semantic markup and basic ARIA attributes
+- **Project Planning**: Requirements analysis and site structure planning
+
+### Part 2: CSS Styling & Responsive Design
+
+- **Advanced CSS Styling**: Comprehensive styling with CSS custom properties
+- **Responsive Layout**: Mobile-first approach with Flexbox and Grid layouts
+- **Breakpoint Management**: Tablet (768px) and mobile (480px) responsive design
+- **Visual Design System**: Consistent color scheme, typography, and spacing
+- **Interactive Elements**: Hover states, transitions, and focus styles
+- **Cross-browser Compatibility**: Testing and optimization for different browsers
+
+### Planned Features (Future Parts)
+
+- **Part 3:** Enhanced Functionality & SEO
+
+## Timeline and Milestones
+
+### Part 1: HTML Basic Layout & Project Initiation ✅
+
+**Status**: COMPLETED
+
+- ✅ Project requirements analysis and planning
+- ✅ Website structure and information architecture
+- ✅ Semantic HTML5 markup for all pages
+- ✅ Basic form structures and content organization
+- ✅ Accessibility foundation implementation
+- ✅ Cross-page navigation consistency
+
+### Part 2: CSS Styling & Responsive Design 🎯
+
+**Status**: CURRENT FOCUS
+
+- ✅ CSS reset and base styles implementation
+- ✅ Color scheme and typography system development
+- ✅ Responsive layout with Flexbox/Grid
+- ✅ Mobile and tablet breakpoint styling
+- ✅ Interactive states and visual enhancements
+- ✅ Cross-browser testing and optimization
+
+## Change Log
+
+### Version 1.0 - Part 1 Completion
+
+**Date**: [28 September 2025]
+
+#### Project Foundation
+
+- **Added**: Complete HTML structure for 5 main pages
+- **Added**: Semantic HTML5 elements throughout
+- **Added**: Consistent navigation system
+- **Added**: Basic form structures with proper labeling
+- **Added**: Content hierarchy with logical heading structure
+
+#### Content Organization
+
+- **Enhanced**: Information architecture for optimal user flow
+- **Enhanced**: Section organization within each page
+- **Enhanced**: Accessibility foundation with ARIA attributes
+- **Enhanced**: Cross-linking between related pages
+
+#### Technical Implementation
+
+- **Fixed**: Navigation consistency across all pages
+- **Fixed**: Proper HTML document structure
+- **Fixed**: Form input types and attributes
+- **Fixed**: Image alt text for accessibility
+
+### Technical References
+
+1. MDN Web Docs. (2023). _HTML: HyperText Markup Language_. Mozilla Foundation. https://developer.mozilla.org/en-US/docs/Web/HTML
+2. W3C. (2018). _Web Content Accessibility Guidelines (WCAG) 2.1_. World Wide Web Consortium. https://www.w3.org/TR/WCAG21/
+3. W3Schools. (2023). _HTML5 Semantic Elements_. https://www.w3schools.com/html/html5_semantic_elements.asp
+
+### Design References
+
+1. Nielsen Norman Group. (2023). _Information Architecture_. https://www.nngroup.com/articles/ia/
+2. Web AIM. (2023). _Accessibility Principles_. https://webaim.org/articles/
+
+### Citation Style
+
+This document uses APA 7th Edition referencing style as required by The Independent Institute of Education.
+
+---
+
+**Project Status**: Part 1 Complete | Part 2 complete  
+**Current Phase**: CSS Styling & Responsive Design  
+**Next Milestone**: Part 3 Completion - Enhanced Functionality
+**Last Updated**: 28 September 2025
+
+© 2025 The Independent Institute of Education (Pty) Ltd. This document contains confidential information for academic purposes only.

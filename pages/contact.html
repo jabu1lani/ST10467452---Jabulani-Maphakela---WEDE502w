@@ -1,110 +1,143 @@
 <!DOCTYPE html>
+<!-- 
+    CONTACT PAGE - GreenEarth Community Garden
+    Contact information and inquiry form for the organization
+    Purpose: Provide multiple ways for visitors to get in touch
+-->
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GreenEarth Community Garden</title>
-  </head>
-  <body>
+    <title>GreenEarth Community Garden - Contact Us</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Header section -->
     <header>
-      <h1>GreenEarth Community Garden</h1>
-      <p>Bringing communities together one plant at a time</p>
+        <h1>GreenEarth Community Garden</h1>
+        <p>Bringing communities together one plant at a time</p>
     </header>
 
+    <!-- Navigation menu -->
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="volunteer.html">Volunteer</a></li>
-      </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li> <!-- Active page -->
+        </ul>
     </nav>
 
+    <!-- Main contact content -->
     <main>
-      <h2>Contact Us</h2>
-      <p>
-        We'd love to hear from you! Reach out with questions, to learn more
-        about our services, or to get involved.
-      </p>
+        <!-- Page introduction -->
+        <h2>Contact Us</h2>
+        <p>
+            We'd love to hear from you! Reach out with questions, to learn more
+            about our services, or to get involved.
+        </p>
 
-      <section id="contact-info">
-        <h3>Contact Information</h3>
-        <ul>
-          <li>
-            <strong>Address:</strong> 121 Exhibition St, Melbourne VIC 3000,
-            Australia
-          </li>
-          <li><strong>Phone:</strong> +61-7-8198-9786</li>
-          <li><strong>Email:</strong> info@GreenEarth.org</li>
-          <li><strong>Hours:</strong> Monday-Friday, 9am-5pm</li>
-        </ul>
+        <!-- Contact information section -->
+        <section id="contact-info">
+            <h3>Contact Information</h3> <!-- Section heading -->
+            <ul>
+                <!-- List of contact details -->
+                <li>
+                    <strong>Address:</strong> 121 Exhibition St, Melbourne VIC 3000,
+                    Australia <!-- Physical location -->
+                </li>
+                <li><strong>Phone:</strong> +61-7-8198-9786</li> <!-- Phone number -->
+                <li><strong>Email:</strong> info@GreenEarth.org</li> <!-- General email -->
+                <li><strong>Hours:</strong> Monday-Friday, 9am-5pm</li> <!-- Business hours -->
+            </ul>
+        </section>
+
+        <!-- Location map section -->
+        <section id="map">
+        <header>
+            <h1>Our Location</h1>
+            <p class="address">121 Exhibition St, Melbourne VIC 3000, Australia</p>
+        
+        
+            <div class="map-container">
+                <!-- Embedded Google Map -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.332389715793!2d144.9671173153166!3d-37.81410797975148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x577133f4bc9e2f8f!2s121%20Exhibition%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe> 
+            </div>
       </section>
 
-      <section id="map">
-        <h3>Find Us</h3>
-        <img
-          src="https://placehold.co/600x400?text=Location+Map"
-          alt="Map showing GreenEarth Community garden location"
-        />
-      </section>
+        <!-- Contact form section -->
+        <section id="contact-form">
+            <h3>Send Us a Message</h3>
+            <!-- Inquiry form for general questions -->
+            <form>
+                <!-- Personal information fields -->
+                <label for="contact-name">Your Name:</label>
+                <input type="text" id="contact-name" name="name" required />
 
-      <section id="contact-form">
-        <h3>Send Us a Message</h3>
-        <form>
-          <label for="contact-name">Your Name:</label>
-          <input type="text" id="contact-name" name="name" required />
+                <label for="contact-email">Email Address:</label>
+                <input type="email" id="contact-email" name="email" required />
 
-          <label for="contact-email">Email Address:</label>
-          <input type="email" id="contact-email" name="email" required />
+                <label for="contact-phone">Phone Number:</label>
+                <input type="tel" id="contact-phone" name="phone" />
 
-          <label for="contact-phone">Phone Number:</label>
-          <input type="tel" id="contact-phone" name="phone" />
+                <!-- Inquiry subject selection -->
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject">
+                    <option value="">Select a subject</option> <!-- Default option -->
+                    <option value="services">Information about services</option>
+                    <option value="volunteer">Volunteering opportunities</option>
+                    <option value="donation">Making a donation</option>
+                    <option value="partnership">Partnership opportunities</option>
+                    <option value="other">Other</option>
+                </select>
 
-          <label for="subject">Subject:</label>
-          <select id="subject" name="subject">
-            <option value="">Select a subject</option>
-            <option value="services">Information about services</option>
-            <option value="volunteer">Volunteering opportunities</option>
-            <option value="donation">Making a donation</option>
-            <option value="partnership">Partnership opportunities</option>
-            <option value="other">Other</option>
-          </select>
+                <!-- Message content -->
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
 
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+                <!-- Form submission -->
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
 
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
-
-      <section id="staff-contacts">
-        <h3>Staff Contacts</h3>
-        <ul>
-          <li><strong>General Inquiries:</strong> info@GreenEarth.org</li>
-          <li>
-            <strong>Volunteer Coordinator:</strong>
-            volunteer@GreenEarth.org
-          </li>
-          <li><strong>Program Director:</strong> programs@GreenEarth.org</li>
-          <li><strong>Executive Director:</strong> director@GreenEarth.org</li>
-        </ul>
-      </section>
+        <!-- Staff contact directory -->
+        <section id="staff-contacts">
+            <h3>Staff Contacts</h3>
+            <ul>
+                <!-- Department-specific email contacts -->
+                <li><strong>General Inquiries:</strong> info@GreenEarth.org</li>
+                <li>
+                    <strong>Volunteer Coordinator:</strong>
+                    volunteer@GreenEarth.org
+                </li>
+                <li><strong>Program Director:</strong> programs@GreenEarth.org</li>
+                <li><strong>Executive Director:</strong> director@GreenEarth.org</li>
+            </ul>
+        </section>
     </main>
 
+    <!-- Footer section -->
     <footer>
-      <p>&copy; 2025 GreenEarth Community Garden. All rights reserved.</p>
-      <address>
-        121 Exhibition St, Melbourne VIC 3000, Australia<br />
-        Email:
-        <a href="mailto:info@GreenEarth.org">info@GreenEarth.org</a>
-        | Phone: <a href="cell:+61-7-8198-9786">+61-7-8198-9786</a>
-      </address>
-      <p>
-        <a href="index.html">Home</a> | <a href="about.html">About</a> |
-        <a href="services.html">Services</a> |
-        <a href="volunteer.html">Volunteer</a> |
-        <a href="contact.html">Contact</a>
-      </p>
+        <p>&copy; 2025 GreenEarth Community Garden. All rights reserved.</p>
+        <address>
+            121 Exhibition St, Melbourne VIC 3000, Australia<br />
+            Email:
+            <a href="mailto:info@GreenEarth.org">info@GreenEarth.org</a>
+            | Phone: <a href="tel:+61-7-8198-9786">+61-7-8198-9786</a>
+        </address>
+        <p>
+            <a href="index.html">Home</a> | 
+            <a href="about.html">About</a> |
+            <a href="services.html">Services</a> |
+            <a href="volunteer.html">Volunteer</a> |
+            <a href="contact.html">Contact</a>
+        </p>
     </footer>
-  </body>
+</body>
 </html>
