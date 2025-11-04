@@ -9,7 +9,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GreenEarth Community Garden - Contact Us</title>
+
+    <meta name="description" content="Get in touch with GreenEarth Community Garden in Melbourne. Visit us at 121 Exhibition St or contact us for gardening programs and volunteer opportunities.">
+    <meta name="keywords" content="contact community garden Melbourne, gardening information Melbourne, visit community garden, garden location Melbourne">
+    <meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="../css/style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "GreenEarth Community Garden",
+        "description": "Community garden and urban sustainability center in Melbourne",
+        "url": "https://www.greenearthgardens.org.au",
+        "telephone": "+61-7-8198-9786",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "121 Exhibition St",
+            "addressLocality": "Melbourne",
+            "addressRegion": "VIC",
+            "postalCode": "3000",
+            "addressCountry": "AU"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -37.814107,
+            "longitude": 144.967117
+        },
+        "openingHours": [
+            "Mo-Fr 09:00-17:00"
+        ],
+        "areaServed": "Melbourne and surrounding areas"
+    }
+    </script>
+
 </head>
 
 <body>
@@ -27,6 +61,7 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="volunteer.html">Volunteer</a></li>
             <li><a href="contact.html" class="active">Contact</a></li> <!-- Active page -->
+            <li><a href="enquiry.html">Service Enquiry</a></li>
         </ul>
     </nav>
 
@@ -69,7 +104,7 @@
                     loading="lazy">
                 </iframe> 
             </div>
-      </section>
+        </section>
 
         <!-- Contact form section -->
         <section id="contact-form">
@@ -77,32 +112,63 @@
             <!-- Inquiry form for general questions -->
             <form>
                 <!-- Personal information fields -->
-                <label for="contact-name">Your Name:</label>
-                <input type="text" id="contact-name" name="name" required />
+                <div class="form-group">
+                    <label for="contact-name">Your Name: *</label>
+                    <input type="text" id="contact-name" name="name" required 
+                           minlength="2" maxlength="50"
+                           pattern="[A-Za-z\s]{2,50}"
+                           title="Please enter your full name (2-50 characters)">
+                    <span class="error-message" id="name-error"></span>
+                </div>
 
-                <label for="contact-email">Email Address:</label>
-                <input type="email" id="contact-email" name="email" required />
+                <div class="form-group">
+                    <label for="contact-email">Email Address: *</label>
+                    <input type="email" id="contact-email" name="email" required
+                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                           title="Please enter a valid email address">
+                    <span class="error-message" id="email-error"></span>
+                </div>
 
-                <label for="contact-phone">Phone Number:</label>
-                <input type="tel" id="contact-phone" name="phone" />
+                <div class="form-group">
+                    <label for="contact-phone">Phone Number:</label>
+                    <input type="tel" id="contact-phone" name="phone"
+                           pattern="[\+]?[0-9\s\-\(\)]{8,20}"
+                           title="Please enter a valid phone number">
+                    <span class="error-message" id="phone-error"></span>
+                </div>
 
                 <!-- Inquiry subject selection -->
-                <label for="subject">Subject:</label>
-                <select id="subject" name="subject">
-                    <option value="">Select a subject</option> <!-- Default option -->
-                    <option value="services">Information about services</option>
-                    <option value="volunteer">Volunteering opportunities</option>
-                    <option value="donation">Making a donation</option>
-                    <option value="partnership">Partnership opportunities</option>
-                    <option value="other">Other</option>
-                </select>
+                <div class="form-group">
+                    <label for="subject">Subject: *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="services">Information about services</option>
+                        <option value="volunteer">Volunteering opportunities</option>
+                        <option value="donation">Making a donation</option>
+                        <option value="partnership">Partnership opportunities</option>
+                        <option value="general">General inquiry</option>
+                        <option value="complaint">Complaint</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="error-message" id="subject-error"></span>
+                </div>
 
                 <!-- Message content -->
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
+                <div class="form-group">
+                    <label for="message">Message: *</label>
+                    <textarea id="message" name="message" rows="5" required
+                              minlength="10" maxlength="1000"
+                              placeholder="Please enter your message (10-1000 characters)"></textarea>
+                    <span class="error-message" id="message-error"></span>
+                    <div class="char-count"><span id="message-chars">0</span>/1000 characters</div>
+                </div>
                 <!-- Form submission -->
-                <button type="submit">Send Message</button>
+                <div class="form-actions">
+                    <button type="submit" id="contact-submit">Send Message</button>
+                    <button type="reset" id="contact-reset">Clear Form</button>
+                </div>
+                
+                <div id="form-status"></div>
             </form>
         </section>
 
@@ -137,7 +203,9 @@
             <a href="services.html">Services</a> |
             <a href="volunteer.html">Volunteer</a> |
             <a href="contact.html">Contact</a>
+            <a href="enquiry.html">Service Enquiry</a>
         </p>
     </footer>
+    <script src="../js/script.js"></script>
 </body>
 </html>

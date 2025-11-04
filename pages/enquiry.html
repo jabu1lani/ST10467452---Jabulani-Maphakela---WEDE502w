@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Enquiries | GreenEarth Community Garden</title>
+    <meta
+      name="description"
+      content="Submit service enquiries for GreenEarth Community Garden programs. Get information about costs, availability, and scheduling for our gardening services in Melbourne."
+    />
+    <meta
+      name="keywords"
+      content="service enquiry, gardening programs cost, workshop availability, community garden services Melbourne"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>GreenEarth Community Garden</h1>
+      <p>Bringing communities together one plant at a time</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="enquiry.html" class="active">Service Enquiry</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Service & Program Enquiries</h2>
+      <p>
+        Interested in our gardening programs, workshops, or services? Submit
+        your enquiry below and we'll provide you with detailed information
+        including availability, costs, and scheduling.
+      </p>
+
+      <section id="enquiry-form-section">
+        <form id="service-enquiry-form" novalidate>
+          <fieldset>
+            <legend>Your Contact Information</legend>
+
+            <div class="form-group">
+              <label for="enquiry-name">Full Name: *</label>
+              <input
+                type="text"
+                id="enquiry-name"
+                name="name"
+                required
+                minlength="2"
+                maxlength="50"
+                pattern="[A-Za-z\s]{2,50}"
+              />
+              <span class="error-message" id="enquiry-name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="enquiry-email">Email Address: *</label>
+              <input
+                type="email"
+                id="enquiry-email"
+                name="email"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              />
+              <span class="error-message" id="enquiry-email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="enquiry-phone">Phone Number: *</label>
+              <input
+                type="tel"
+                id="enquiry-phone"
+                name="phone"
+                required
+                pattern="[\+]?[0-9\s\-\(\)]{8,20}"
+              />
+              <span class="error-message" id="enquiry-phone-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="enquiry-address">Address:</label>
+              <textarea
+                id="enquiry-address"
+                name="address"
+                rows="3"
+                placeholder="Street address, suburb, postcode"
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Service Information</legend>
+
+            <div class="form-group">
+              <label for="service-type">Service/Program of Interest: *</label>
+              <select id="service-type" name="service_type" required>
+                <option value="">Select a service</option>
+                <option value="gardening-101">Gardening 101 Workshops</option>
+                <option value="youth-programs">Youth Gardening Programs</option>
+                <option value="composting">
+                  Composting & Soil Health Clinics
+                </option>
+                <option value="community-work">Community Work Days</option>
+                <option value="skill-sharing">Skill-Sharing Library</option>
+                <option value="donation-plots">Donation Plots Program</option>
+                <option value="seed-swap">Seed & Seedling Swap/Sale</option>
+                <option value="herb-garden">Herb Garden Workshops</option>
+                <option value="season-extension">
+                  Season Extension Workshops
+                </option>
+                <option value="other-service">Other Service</option>
+              </select>
+              <span class="error-message" id="service-type-error"></span>
+            </div>
+
+            <div
+              class="form-group"
+              id="other-service-container"
+              style="display: none"
+            >
+              <label for="other-service">Please specify:</label>
+              <input type="text" id="other-service" name="other_service" />
+            </div>
+
+            <div class="form-group">
+              <label for="preferred-date">Preferred Start Date:</label>
+              <input
+                type="date"
+                id="preferred-date"
+                name="preferred_date"
+                min="2025-01-01"
+              />
+              <span class="error-message" id="date-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="participant-count">Number of Participants:</label>
+              <input
+                type="number"
+                id="participant-count"
+                name="participant_count"
+                min="1"
+                max="50"
+                value="1"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="urgency">Urgency Level:</label>
+              <select id="urgency" name="urgency">
+                <option value="low">Low - General inquiry</option>
+                <option value="medium" selected>Medium - Planning phase</option>
+                <option value="high">High - Ready to start soon</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Additional Information</legend>
+
+            <div class="form-group">
+              <label for="enquiry-message"
+                >Specific Questions or Requirements: *</label
+              >
+              <textarea
+                id="enquiry-message"
+                name="message"
+                rows="5"
+                required
+                minlength="10"
+                maxlength="500"
+                placeholder="Please describe what you're looking for, any specific requirements, or questions you have..."
+              ></textarea>
+              <span class="error-message" id="enquiry-message-error"></span>
+              <div class="char-count">
+                <span id="enquiry-message-chars">0</span>/500 characters
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="hear-about">How did you hear about us?</label>
+              <select id="hear-about" name="hear_about">
+                <option value="">Select an option</option>
+                <option value="search">Search engine</option>
+                <option value="social">Social media</option>
+                <option value="friend">Friend or family</option>
+                <option value="event">Community event</option>
+                <option value="flyer">Flyer or brochure</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input
+                type="checkbox"
+                id="newsletter"
+                name="newsletter"
+                value="yes"
+                checked
+              />
+              <label for="newsletter"
+                >Send me updates about gardening tips and community
+                events</label
+              >
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                value="accepted"
+                required
+              />
+              <label for="terms"
+                >I agree to the privacy policy and terms of service *</label
+              >
+              <span class="error-message" id="terms-error"></span>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" id="enquiry-submit">Submit Enquiry</button>
+            <button type="reset" id="enquiry-reset">Clear Form</button>
+          </div>
+
+          <div
+            id="enquiry-response"
+            class="response-container"
+            style="display: none"
+          >
+            <h3>Thank You for Your Enquiry!</h3>
+            <div id="response-details"></div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 GreenEarth Community Garden. All rights reserved.</p>
+      <address>
+        121 Exhibition St, Melbourne VIC 3000, Australia<br />
+        Email: <a href="mailto:info@GreenEarth.org">info@GreenEarth.org</a> |
+        Phone: <a href="tel:+61-7-8198-9786">+61-7-8198-9786</a>
+      </address>
+      <p>
+        <a href="../index.html">Home</a> | <a href="about.html">About</a> |
+        <a href="services.html">Services</a> |
+        <a href="volunteer.html">Volunteer</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="enquiry.html">Service Enquiry</a>
+      </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

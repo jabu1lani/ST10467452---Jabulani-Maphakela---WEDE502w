@@ -10,7 +10,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Descriptive page title for user orientation -->
     <title>GreenEarth Community Garden - About Us</title>
+
+    <meta
+      name="description"
+      content="Learn about GreenEarth Community Garden's mission, history since 2015, and our commitment to urban sustainability and community engagement in Melbourne."
+    />
+    <meta
+      name="keywords"
+      content="about community garden Melbourne, urban sustainability, gardening mission, environmental stewardship Melbourne"
+    />
+    <meta name="robots" content="index, follow" />
+
     <link rel="stylesheet" href="../css/style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About GreenEarth Community Garden",
+        "description": "History and mission of Melbourne's community garden organization",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "GreenEarth Community Garden",
+          "foundingDate": "2015",
+          "slogan": "Bringing communities together one plant at a time"
+        }
+      }
+    </script>
   </head>
 
   <body>
@@ -30,6 +56,7 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="volunteer.html">Volunteer</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="enquiry.html">Service Enquiry</a></li>
         </ul>
       </nav>
     </header>
@@ -40,31 +67,40 @@
       <p><a href="services.html">Learn More</a></p>
 
       <!-- Primary page heading -->
-      <h1>About Page</h1>
+      <h1>About GreenEarth Community Garden</h1>
       <!-- Main title of the page -->
 
       <!-- Organizational background and history -->
-      <p>
-        GreenEarth Community Garden is a Melbourne-based non-profit organisation
-        established in 2015 with a focus on urban sustainability and community
-        engagement. Through its network of three inner-city gardens, the
-        organisation provides hands-on gardening workshops, volunteer
-        opportunities, and educational programs for all age groups.
-      </p>
+      <section aria-labelledby="our-history">
+        <h2 id="our-history">Our History & Background</h2>
+        <p>
+          GreenEarth Community Garden is a Melbourne-based non-profit
+          organisation established in 2015 with a focus on urban sustainability
+          and community engagement. Through its network of three inner-city
+          gardens, the organisation provides hands-on gardening workshops,
+          volunteer opportunities, and educational programs for all age groups.
+        </p>
+      </section>
 
       <!-- Mission and vision statements -->
-      <p>
-        The primary mission is "to foster environmental stewardship through
-        practical gardening initiatives," while the vision centres on "creating
-        greener and more self-sufficient urban communities."
-      </p>
+      <section aria-labelledby="mission-vision">
+        <h2 id="mission-vision">Our Mission & Vision</h2>
+        <p>
+          The primary mission is "to foster environmental stewardship through
+          practical gardening initiatives," while the vision centres on
+          "creating greener and more self-sufficient urban communities."
+        </p>
+      </section>
 
       <!-- Target audience description -->
-      <p>
-        The target audience includes residents interested in sustainable living,
-        school groups seeking outdoor education experiences, and environmental
-        advocates looking for volunteer opportunities.
-      </p>
+      <section aria-labelledby="our-community">
+        <h2 id="our-community">Our Community</h2>
+        <p>
+          The target audience includes residents interested in sustainable
+          living, school groups seeking outdoor education experiences, and
+          environmental advocates looking for volunteer opportunities.
+        </p>
+      </section>
     </main>
 
     <!-- Consistent footer across all pages -->
@@ -81,7 +117,9 @@
         <a href="services.html">Services</a> |
         <a href="volunteer.html">Volunteer</a> |
         <a href="contact.html">Contact</a>
+        <a href="enquiry.html">Service Enquiry</a>
       </p>
     </footer>
+    <script src="../js/script.js"></script>
   </body>
 </html>
