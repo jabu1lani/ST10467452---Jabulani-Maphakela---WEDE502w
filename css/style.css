@@ -8,7 +8,6 @@
 
 /* Root Variables for Consistent Design */
 /* These variables ensure consistency across the entire website */
-
 :root {
   /* Color Palette - Green theme for garden/nature aesthetic */
   --primary-green: #2e7d32;
@@ -73,20 +72,17 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5rem; /* 40px - Main page titles */
-}
-
+  font-size: 2.5rem;
+} /* 40px - Main page titles */
 h2 {
-  font-size: 2rem; /* 32px - Section headings */
-}
-
+  font-size: 2rem;
+} /* 32px - Section headings */
 h3 {
-  font-size: 1.5rem; /* 24px - Sub-section headings */
-}
-
+  font-size: 1.5rem;
+} /* 24px - Sub-section headings */
 h4 {
-  font-size: 1.25rem; /* 20px - Minor headings */
-}
+  font-size: 1.25rem;
+} /* 20px - Minor headings */
 
 /* Paragraph Styles */
 p {
@@ -217,62 +213,365 @@ section h2 {
   margin-bottom: var(--space-sm);
 }
 
-/* Form Styling - Consistent form element design */
-form {
-  background: var(--light-gray);
-  padding: var(--space-lg);
-  border-radius: var(--radius-md);
-  margin-top: var(--space-md);
+/* Form Enhancement Styles - Improved form usability */
+.form-group {
+  margin-bottom: var(--space-md);
+  position: relative;
 }
 
-/* Form Labels - Accessible form labeling */
-label {
+.form-group label {
   display: block;
   margin-bottom: var(--space-xs);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--dark-green);
 }
 
-/* Form Inputs - Consistent input styling */
-input,
-select,
-textarea {
+.form-group input,
+.form-group select,
+.form-group textarea {
   width: 100%;
   padding: var(--space-sm);
-  margin-bottom: var(--space-md);
-  border: 1px solid var(--medium-gray);
+  border: 2px solid var(--medium-gray);
   border-radius: var(--radius-sm);
   font-family: var(--font-main);
   font-size: 1rem;
   transition: var(--transition);
 }
 
-/* Form Input Focus States - Accessibility enhancement */
-input:focus,
-select:focus,
-textarea:focus {
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
   outline: none;
   border-color: var(--primary-green);
-  box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
 }
 
-/* Button Styles - Primary elements */
-button {
-  background-color: var(--primary-green);
-  color: var(--white);
-  border: none;
-  padding: var(--space-sm) var(--space-lg);
+/* Form Error States - Visual feedback for invalid inputs */
+.form-group input.error,
+.form-group select.error,
+.form-group textarea.error {
+  border-color: #d32f2f;
+  box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Character Counter - For text area length indication */
+.char-count {
+  text-align: right;
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+/* Form Actions - Button container styling */
+.form-actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.form-actions button {
+  flex: 1;
+}
+
+.form-actions button[type="reset"] {
+  background-color: var(--light-gray);
+  color: var(--text-dark);
+}
+
+.form-actions button[type="reset"]:hover {
+  background-color: var(--medium-gray);
+}
+
+/* Fieldset Grouping - For form section organization */
+fieldset {
+  border: 2px solid var(--light-green);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  background: var(--white);
+}
+
+legend {
+  font-weight: 600;
+  color: var(--dark-green);
+  padding: 0 var(--space-sm);
+  font-size: 1.1rem;
+}
+
+/* Checkbox Group - Horizontal alignment for checkboxes */
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin-top: 0.25rem;
+}
+
+.checkbox-group label {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+/* Success Message - Form submission feedback */
+.success-message {
+  background: var(--light-green);
+  border: 2px solid var(--primary-green);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.success-message h4 {
+  color: var(--dark-green);
+  margin-bottom: var(--space-sm);
+}
+
+/* Email Preview - Display composed email content */
+.email-preview {
+  background: var(--white);
+  padding: var(--space-md);
   border-radius: var(--radius-sm);
-  font-size: 1rem;
-  font-weight: 500;
+  margin-top: var(--space-sm);
+  border-left: 4px solid var(--primary-green);
+}
+
+/* Response Container - Service enquiry results */
+.response-container {
+  background: var(--light-green);
+  border: 2px solid var(--primary-green);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.service-response {
+  line-height: 1.8;
+}
+
+/* Next Steps - Ordered list for process guidance */
+.next-steps {
+  background: var(--white);
+  padding: var(--space-md);
+  border-radius: var(--radius-sm);
+  margin: var(--space-md) 0;
+}
+
+.next-steps ol {
+  margin-left: var(--space-md);
+}
+
+.contact-note {
+  font-style: italic;
+  color: var(--text-light);
+}
+
+/* Button Disabled State - Visual indication for inactive buttons */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Accordion Styles - Collapsible content sections */
+section h3 {
+  cursor: pointer;
+  padding: var(--space-sm);
+  background-color: var(--light-green);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  position: relative;
+}
+
+section h3::after {
+  content: "▼";
+  position: absolute;
+  right: var(--space-sm);
+  transition: var(--transition);
+}
+
+section h3.active::after {
+  transform: rotate(180deg);
+}
+
+section h3:hover {
+  background-color: var(--accent-green);
+}
+
+/* Tab Styles - Interactive tabbed interface */
+.volunteer-tabs {
+  margin-bottom: var(--space-lg);
+}
+
+.tab-headers {
+  display: flex;
+  border-bottom: 2px solid var(--primary-green);
+  flex-wrap: wrap;
+}
+
+.tab-header {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--light-gray);
+  border: none;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  margin-right: 2px;
   cursor: pointer;
   transition: var(--transition);
 }
 
-button:hover,
-button:focus {
-  background-color: var(--dark-green);
-  transform: translateY(-2px);
+.tab-header.active,
+.tab-header:hover {
+  background: var(--primary-green);
+  color: var(--white);
+}
+
+.tab-content {
+  display: none;
+  padding: var(--space-lg);
+  background: var(--light-gray);
+  border-radius: 0 var(--radius-md) var(--radius-md) var(--radius-md);
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Gallery and Lightbox Styles - Image display system */
+.image-gallery {
+  margin: var(--space-xl) 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.gallery-item {
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+/* Lightbox Modal - Full-screen image viewer */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: var(--radius-md);
+}
+
+.lightbox .close {
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-xl);
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.lightbox .close:hover {
+  color: var(--accent-green);
+}
+
+/* Map Styles - Interactive location display */
+.map-container {
+  height: 400px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+/* Search Styles - Service filtering interface */
+.search-container {
+  margin: var(--space-lg) 0;
+  display: flex;
+  gap: var(--space-sm);
+}
+
+#service-search {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+#search-btn {
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+/* Animation Keyframes - Reusable animation definitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dynamic Content Styles - AJAX-loaded content */
+.featured-services {
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  background: var(--light-green);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--primary-green);
+  animation: slideDown 0.5s ease;
+}
+
+.dynamic-field {
+  margin-bottom: var(--space-md);
+  animation: slideDown 0.3s ease;
 }
 
 /* Image Styling - Consistent image presentation */
@@ -283,7 +582,6 @@ img {
   box-shadow: 0 4px 8px var(--shadow);
 }
 
-/* Responsive Image Class - For full-width images */
 .responsive-img {
   width: 100%;
   height: auto;
@@ -301,7 +599,6 @@ footer {
 footer a {
   color: var(--accent-green);
 }
-
 footer a:hover {
   color: var(--white);
 }
@@ -311,17 +608,15 @@ address {
   margin: var(--space-md) 0;
 }
 
-/* Utility Classes  Reusable helper classes for common styling*/
+/* Utility Classes - Reusable helper classes for common styling */
 
 /* Text Alignment Utilities */
 .text-center {
   text-align: center;
 }
-
 .text-left {
   text-align: left;
 }
-
 .text-right {
   text-align: right;
 }
@@ -372,23 +667,19 @@ address {
 .bg-light {
   background-color: var(--light-gray);
 }
-
 .bg-green {
   background-color: var(--light-green);
 }
 
-/* Responsive Design - Tablet Breakpoint */
-
+/* Responsive Design - Tablet Breakpoint (768px and below) */
 @media screen and (max-width: 768px) {
   /* Adjust typography scale for tablet */
   h1 {
     font-size: 2rem;
   }
-
   h2 {
     font-size: 1.75rem;
   }
-
   h3 {
     font-size: 1.25rem;
   }
@@ -402,7 +693,6 @@ address {
   nav ul {
     flex-direction: column;
   }
-
   nav a {
     text-align: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -418,9 +708,40 @@ address {
   main {
     padding: var(--space-lg) 0;
   }
+
+  /* Adjust tab layout for mobile */
+  .tab-headers {
+    flex-direction: column;
+  }
+  .tab-header {
+    border-radius: 0;
+    margin-right: 0;
+    margin-bottom: 1px;
+  }
+
+  /* Adjust gallery grid for smaller screens */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  /* Stack search elements vertically */
+  .search-container {
+    flex-direction: column;
+  }
+
+  /* Adjust form layouts for tablet */
+  fieldset {
+    padding: var(--space-md);
+  }
+  .form-actions {
+    flex-direction: column;
+  }
+  .checkbox-group {
+    align-items: flex-start;
+  }
 }
 
-/* Responsive Design - Mobile Breakpoint  */
+/* Responsive Design - Mobile Breakpoint (480px and below) */
 @media screen and (max-width: 480px) {
   /* Adjust spacing scale for mobile */
   :root {
@@ -433,7 +754,6 @@ address {
   h1 {
     font-size: 1.75rem;
   }
-
   h2 {
     font-size: 1.5rem;
   }
@@ -442,11 +762,9 @@ address {
   header {
     padding: var(--space-md) 0;
   }
-
   header h1 {
     font-size: 1.75rem;
   }
-
   header p {
     font-size: 1rem;
   }
@@ -460,13 +778,51 @@ address {
   button {
     width: 100%;
   }
+
+  /* Improve mobile touch targets */
+  nav a,
+  button,
+  .tab-header {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Optimize mobile typography */
+  body {
+    font-size: 16px; /* Prevent zoom on iOS */
+    line-height: 1.5;
+  }
+
+  /* Adjust mobile navigation spacing */
+  .main-nav ul {
+    gap: 0;
+  }
+  .main-nav a {
+    padding: 12px 8px;
+    font-size: 16px;
+  }
+
+  /* Compact form elements for mobile */
+  fieldset {
+    padding: var(--space-sm);
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: var(--space-sm);
+  }
 }
 
-/* Print Styles Optimize website for printing*/
+/* Print Styles - Optimize website for printing */
 @media print {
   /* Hide navigation and footer for printing */
   nav,
-  footer {
+  footer,
+  .image-gallery,
+  .volunteer-tabs {
     display: none;
   }
 
@@ -477,13 +833,25 @@ address {
     color: #000;
   }
 
+  /* Remove backgrounds and shadows for clean print */
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
   /* Display URLs after links for printed documents */
-  a::after {
+  a[href]:after {
     content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
   }
 }
 
-/* Accessibility Improvements */
+/* Accessibility Improvements - Enhanced usability for all users */
+
 /* Screen Reader Only - Hide visually but available to screen readers */
 .sr-only {
   position: absolute;
@@ -507,7 +875,7 @@ textarea:focus {
   outline-offset: 2px;
 }
 
-/* High contrast mode support */
+/* High Contrast Mode Support - Improved visibility preferences */
 @media (prefers-contrast: high) {
   :root {
     --primary-green: #004400;
@@ -516,7 +884,7 @@ textarea:focus {
   }
 }
 
-/* Reduced motion support */
+/* Reduced Motion Support - Respect user motion preferences */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -527,4 +895,14 @@ textarea:focus {
   html {
     scroll-behavior: auto;
   }
+}
+
+/* Performance Optimization - Enhanced loading and rendering */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
 }
